@@ -3,7 +3,6 @@
 namespace Astrogoat\Talkable\Settings;
 
 use Helix\Lego\Settings\AppSettings;
-use Astrogoat\Talkable\Actions\TalkableAction;
 
 class TalkableSettings extends AppSettings
 {

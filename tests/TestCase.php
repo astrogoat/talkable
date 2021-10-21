@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Talkable\Tests;
 
+use Astrogoat\Talkable\TalkableServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Talkable\TalkableServiceProvider;
 
 class TestCase extends Orchestra
 {
