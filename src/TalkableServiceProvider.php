@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Talkable;
 
+use Astrogoat\Talkable\Settings\TalkableSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Astrogoat\Talkable\Settings\TalkableSettings;
 
 class TalkableServiceProvider extends PackageServiceProvider
 {
@@ -16,7 +16,7 @@ class TalkableServiceProvider extends PackageServiceProvider
             return $app
                 ->name('talkable')
                 ->settings(TalkableSettings::class);
-            })
+        })
             ->addMigrations([
                 __DIR__ . '/../database/migrations',
                 __DIR__ . '/../database/migrations/settings',
