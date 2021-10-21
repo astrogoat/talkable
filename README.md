@@ -16,11 +16,9 @@ composer require astrogoat/talkable
 ```
 
 ## Usage
-Included it in your blade file, ideally at the end of the file.
+Included the script it in your Blade file.
 ```php
-@push('footer')
-    @include('talkable::script')
-@endpush
+@include('talkable::script')
 ```
 
 Then add `<div id="talkable-offer"></div>` to where you want the widget to appear.
