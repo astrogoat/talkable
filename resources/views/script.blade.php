@@ -9,5 +9,5 @@
 
         window._talkableq.push(['register_affiliate', {}]);
     </script>
-    <script async src="{{ $settings->script_url }}" type="text/javascript"></script>
+    <script async src="//d2jjzw81hqbuqv.cloudfront.net/integration/clients/{{ $settings->site_id }}.min.js" type="text/javascript"></script>
 @endif

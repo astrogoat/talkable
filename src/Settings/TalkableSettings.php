@@ -7,15 +7,13 @@ use Helix\Lego\Settings\AppSettings;
 class TalkableSettings extends AppSettings
 {
     public string $site_id;
-    public string $script_url;
 
     protected array $rules = [
         'site_id' => ['required'],
-        'script_url' => ['required', 'url'],
     ];
 
     public function description(): string
     {
-        return 'Interact with Talkable.';
+        return 'Referral program software and loyalty solutions for eCommerce brands. Acquire high-value clients at a low cost, increase retention and grow revenue through targeted referral and loyalty programs.';
     }
 }
