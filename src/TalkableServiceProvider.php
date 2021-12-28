@@ -10,15 +10,12 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class TalkableServiceProvider extends PackageServiceProvider
 {
-    public function registerApp(LegoManager $lego)
+    public function registerApp(App $app)
     {
-        $lego->registerApp(function (App $app) {
-            return $app
-                ->name('talkable')
-                ->settings(TalkableSettings::class);
-        })
-            ->addMigrations([
-                __DIR__ . '/../database/migrations',
+        return $app
+            ->name('talkable')
+            ->settings(TalkableSettings::class)
+            ->migrations([
                 __DIR__ . '/../database/migrations/settings',
             ]);
     }
@@ -26,7 +23,9 @@ class TalkableServiceProvider extends PackageServiceProvider
     public function registeringPackage()
     {
         $this->callAfterResolving('lego', function (LegoManager $lego) {
-            $this->registerApp($lego);
+            $lego->registerApp(function (App $app) {
+                return $this->registerApp($app);
+            });
         });
     }
 
