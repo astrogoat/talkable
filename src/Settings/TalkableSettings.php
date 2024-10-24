@@ -7,9 +7,11 @@ use Helix\Lego\Settings\AppSettings;
 class TalkableSettings extends AppSettings
 {
     public string $site_id;
+    public bool $register_affiliate;
 
     protected array $rules = [
         'site_id' => ['required'],
+        'register_affiliate' => ['boolean']
     ];
 
     public function description(): string
