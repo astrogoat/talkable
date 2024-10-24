@@ -11,7 +11,7 @@ class TalkableSettings extends AppSettings
 
     protected array $rules = [
         'site_id' => ['required'],
-        'register_affiliate' => ['boolean']
+        'register_affiliate' => ['boolean'],
     ];
 
     public function description(): string
