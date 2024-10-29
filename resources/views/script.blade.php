@@ -7,7 +7,10 @@
 
         window._talkableq.push(['authenticate_customer']);
 
-        window._talkableq.push(['register_affiliate', {}]);
+        @if($settings->register_affiliate)
+            window._talkableq.push(['register_affiliate', {}]);
+        @endif
+        
     </script>
     <script async src="//d2jjzw81hqbuqv.cloudfront.net/integration/clients/{{ $settings->site_id }}.min.js" type="text/javascript"></script>
 @endif
